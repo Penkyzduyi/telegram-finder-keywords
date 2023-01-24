@@ -20,7 +20,7 @@ async def message_monitor():
                 for keyword in keywords:
                     if keyword in event.message.message:
                         print(event.message.message, 'from', group.name)
-                        await client.send_message('Vago_Barber', event.message.message + ' from ' + group.name)
+                        await client.send_message('name', event.message.message + ' from ' + group.name)
     client.add_event_handler(message_handler)
     await client.run_until_disconnected()
 
